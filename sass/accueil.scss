@@ -1,0 +1,239 @@
+$border-bottom-shadow: 0 3px 2px -2px gray;
+$main-color: #9356dc;
+$icon-fonctionnement-color: #7E7E7E;
+$bg-color: rgba(230, 229, 229, 0.308);
+$pastille-image-text-color: #008766;
+$pastille-image-bg-color: #99E2D0;
+$footer-bg-color: #353535;
+$footer-icon-color: white;
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin icon-style($color: initial){
+  margin-right: 20px;
+  color: $color;
+  width: 15px;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  @include center-flex;
+  width: 100%;
+  height: 70px;
+  box-shadow: $border-bottom-shadow;
+  position: relative;
+}
+
+.header__location {
+  @include center-flex;
+  background-color: #eaeaea;
+  width: 100%;
+  height: 50px;
+  box-shadow: $border-bottom-shadow;
+
+  &__icon{
+    @include icon-style;
+  }
+}
+
+.intro {
+  height: 300px;
+  @include center-flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $bg-color;
+
+  &__title {
+    width: 60%;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    width: 85%;
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    text-decoration: none;
+    background-color: $main-color;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 2px grey;
+  }
+}
+
+.fonctionnement {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  &__title{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.fonctionnement__bloc {
+  background-color: $bg-color;
+  width: 85%;
+  height: 72px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: $border-bottom-shadow;
+
+  &__contenu{
+    @include center-flex;
+
+    &__icon{
+      @include icon-style($icon-fonctionnement-color);
+
+      &--padding{
+        padding-left: 10px;
+      }
+
+      &--color{
+        color: $main-color
+      }
+    }
+  }
+
+  &__pastille {
+    position: relative;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $main-color;
+    @include center-flex;
+    color: white;
+  }
+}
+
+.restaurants{
+  background-color: $bg-color;
+}
+
+.restaurants__title{
+  padding-top: 40px;
+  margin-left: 20px
+}
+
+.restaurants__cards{
+  @include center-flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.restaurants__cards__link{
+  width: 90%;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card{
+  height: 251px;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 20px;
+  box-shadow: $border-bottom-shadow;
+
+  &__image{
+    height: 70%;
+    
+    &__pastille{
+      background-color: $pastille-image-bg-color;
+      color: $pastille-image-text-color;
+      position: relative;
+      padding: 10px;
+      top: -165px;
+      margin-left: auto;
+      margin-right: 20px;
+      width: 65px;
+    }
+  }
+}
+
+.card__image__photo{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.card__content{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
+.fa-heart{
+  font-size: 30px;
+}
+
+.content__heart__uncheck{
+  position: relative;
+  left: 34px;
+}
+
+.content__heart__check{
+  position: relative;
+  color: transparent;
+
+  &:hover{
+    color: $main-color;
+  }
+}
+
+.footer{
+  background-color: $footer-bg-color;
+  padding: 20px;
+
+  &__logo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 110px;
+    filter: invert(100%);
+  }
+
+  &__section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__section__link{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+
+    &__icon{
+      @include icon-style($footer-icon-color);
+    }
+  }
+}
