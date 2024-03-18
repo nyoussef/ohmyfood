@@ -108,11 +108,33 @@ body{
   flex-direction: column;
   padding-top: 20px;
 
+  @media (min-width: 768px){
+    padding-top: 30px;
+    height: 250px;
+    width: 100%;
+  }
+  
   &__title{
     margin-left: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+    
+    @media (min-width: 768px){
+      width: 80%;
+      margin: auto;
+    }
   }
+  
+    &__blocs{
+      display: flex;
+      flex-direction: column;
+  
+      @media (min-width: 768px){
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+      }
+    }
 }
 
 .fonctionnement__bloc {
@@ -124,6 +146,11 @@ body{
   margin-right: auto;
   margin-left: auto;
   box-shadow: $border-bottom-shadow;
+
+  @media (min-width: 768px){
+    
+    width: 30%;
+  }
 
   &__contenu{
     @include center-flex;
@@ -157,17 +184,31 @@ body{
 
 .restaurants{
   background-color: $bg-color;
+  padding-bottom: 20px;
 }
 
 .restaurants__title{
   padding-top: 40px;
-  margin-left: 20px
+  margin-left: 20px;
+
+  @media (min-width: 768px){
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .restaurants__cards{
   @include center-flex;
   flex-direction: column;
   margin-bottom: 60px;
+
+  @media (min-width: 768px){
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .restaurants__cards__link{
@@ -175,6 +216,10 @@ body{
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  @media (min-width: 768px){
+    width: 45%;
+  }
 }
 
 .card{
@@ -238,6 +283,22 @@ body{
   background-color: $footer-bg-color;
   padding: 20px;
 
+  @media (min-width: 768px){
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 40px;
+  }
+
+  &__links{
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px){
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
   &__logo{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -248,6 +309,11 @@ body{
   &__section{
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 768px){
+      flex-direction: row;
+      margin-right: 20px;
+    }
   }
   
   &__section__link{
@@ -256,6 +322,10 @@ body{
     text-decoration: none;
     color: white;
     margin-bottom: 10px;
+
+    @media (min-width: 768px){
+      margin-right: 20px;
+    }
 
     &__icon{
       @include icon-style($footer-icon-color);
