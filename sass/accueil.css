@@ -5,7 +5,6 @@
 }
 
 body {
-  max-width: 768px;
   margin: 0 auto;
 }
 
@@ -17,6 +16,11 @@ body {
   height: 70px;
   box-shadow: 0 3px 2px -2px gray;
   position: relative;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    box-shadow: none;
+  }
 }
 
 .header__location {
@@ -33,6 +37,11 @@ body {
   color: initial;
   width: 15px;
 }
+@media (min-width: 768px) {
+  .header__location {
+    box-shadow: none;
+  }
+}
 
 .intro {
   height: 300px;
@@ -47,9 +56,21 @@ body {
   width: 60%;
   margin-bottom: 15px;
 }
+@media (min-width: 768px) {
+  .intro__title {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
 .intro__subtitle {
   width: 85%;
   margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .intro__subtitle {
+    margin-bottom: 40px;
+  }
 }
 .intro__button {
   text-decoration: none;
@@ -58,6 +79,11 @@ body {
   padding: 20px;
   border-radius: 50px;
   box-shadow: 1px 1px 2px grey;
+  transition: background-color 1s ease, box-shadow 1s ease;
+}
+.intro__button:hover {
+  background-color: #fe79da;
+  box-shadow: 1px 1px 16px grey;
 }
 
 .fonctionnement {
