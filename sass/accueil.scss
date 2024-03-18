@@ -1,5 +1,6 @@
 $border-bottom-shadow: 0 3px 2px -2px gray;
 $main-color: #9356dc;
+$secondary-color: #FF79DA;
 $icon-fonctionnement-color: #7E7E7E;
 $bg-color: rgba(230, 229, 229, 0.308);
 $pastille-image-text-color: #008766;
@@ -26,7 +27,7 @@ $footer-icon-color: white;
 }
 
 body{
-  max-width: 768px;
+  //max-width: 768px;
   margin: 0 auto;
 }
 
@@ -36,6 +37,10 @@ body{
   height: 70px;
   box-shadow: $border-bottom-shadow;
   position: relative;
+
+  @media (min-width: 768px){
+    box-shadow: none;
+  }
 }
 
 .header__location {
@@ -47,6 +52,10 @@ body{
 
   &__icon{
     @include icon-style;
+  }
+
+  @media (min-width: 768px){
+    box-shadow: none;
   }
 }
 
@@ -60,11 +69,21 @@ body{
   &__title {
     width: 60%;
     margin-bottom: 15px;
+
+    @media (min-width: 768px){
+      width: 100%;
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
   }
 
   &__subtitle {
     width: 85%;
     margin-bottom: 50px;
+
+    @media (min-width: 768px){
+      margin-bottom: 40px;
+    }
   }
 
   &__button {
@@ -74,6 +93,12 @@ body{
     padding: 20px;
     border-radius: 50px;
     box-shadow: 1px 1px 2px grey;
+    transition: background-color 1s ease, box-shadow 1s ease;
+
+    &:hover{
+      background-color: mix($main-color, $secondary-color, 0.5);
+      box-shadow: 1px 1px 16px grey;
+    }
   }
 }
 
