@@ -92,10 +92,34 @@ body {
   flex-direction: column;
   padding-top: 20px;
 }
+@media (min-width: 768px) {
+  .fonctionnement {
+    padding-top: 30px;
+    height: 250px;
+    width: 100%;
+  }
+}
 .fonctionnement__title {
   margin-left: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .fonctionnement__title {
+    width: 80%;
+    margin: auto;
+  }
+}
+.fonctionnement__blocs {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .fonctionnement__blocs {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .fonctionnement__bloc {
@@ -107,6 +131,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0 3px 2px -2px gray;
+}
+@media (min-width: 768px) {
+  .fonctionnement__bloc {
+    width: 30%;
+  }
 }
 .fonctionnement__bloc__contenu {
   display: flex;
@@ -141,11 +170,18 @@ body {
 
 .restaurants {
   background-color: rgba(230, 229, 229, 0.308);
+  padding-bottom: 20px;
 }
 
 .restaurants__title {
   padding-top: 40px;
   margin-left: 20px;
+}
+@media (min-width: 768px) {
+  .restaurants__title {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .restaurants__cards {
@@ -155,12 +191,26 @@ body {
   flex-direction: column;
   margin-bottom: 60px;
 }
+@media (min-width: 768px) {
+  .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+}
 
 .restaurants__cards__link {
   width: 90%;
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .restaurants__cards__link {
+    width: 45%;
+  }
 }
 
 .card {
@@ -222,6 +272,23 @@ body {
   background-color: #353535;
   padding: 20px;
 }
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 40px;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__links {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .footer__logo {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -232,12 +299,23 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .footer__section {
+    flex-direction: row;
+    margin-right: 20px;
+  }
+}
 .footer__section__link {
   display: flex;
   flex-direction: row;
   text-decoration: none;
   color: white;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer__section__link {
+    margin-right: 20px;
+  }
 }
 .footer__section__link__icon {
   margin-right: 20px;
