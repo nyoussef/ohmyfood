@@ -81,7 +81,7 @@ body {
   object-fit: cover;
 }
 
-section {
+main {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
@@ -123,7 +123,7 @@ section {
   }
 }
 
-.article{
+.section{
   margin-left: 20px;
   margin-right: 20px;
 
@@ -134,18 +134,18 @@ section {
   }
 }
 
-.article__name{
+.section__name{
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
 }
 
-.article__name__highlight{
+.section__name__highlight{
   border-bottom: $border-bottom-color;
 }
 
 
-.article__menu{
+.section__menu{
   @include center-flex;
   flex-direction:column;
   margin-bottom: 10px;
