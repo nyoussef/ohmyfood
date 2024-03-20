@@ -53,6 +53,7 @@ $border-bottom-color: 3px solid $tertiary-color;
 
 body {
   margin: 0 auto;
+  opacity: 1;
 }
 
 .header__arrow {
@@ -62,7 +63,7 @@ body {
 }
 
 .fa-arrow-left {
-  font-size: 30px;
+  font-size: 30px;  
 }
 
 .header__logo {
@@ -118,7 +119,7 @@ main {
   position: relative;
   color: transparent;
 
-  &:hover {
+  &:active {
     color: $main-color;
   }
 }
@@ -142,6 +143,7 @@ main {
 
 .section__name__highlight{
   border-bottom: $border-bottom-color;
+  padding-bottom: 5px;
 }
 
 

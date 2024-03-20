@@ -6,6 +6,7 @@
 
 body {
   margin: 0 auto;
+  opacity: 1;
 }
 
 .header__arrow {
@@ -74,7 +75,7 @@ main {
   position: relative;
   color: transparent;
 }
-.restaurant__heart__check:hover {
+.restaurant__heart__check:active {
   color: #9356dc;
 }
 
@@ -98,6 +99,7 @@ main {
 
 .section__name__highlight {
   border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
 }
 
 .section__menu {
