@@ -50,7 +50,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: rgba(230, 229, 229, 0.308);
+  background-color: #F6F6F6;
 }
 .intro__title {
   width: 60%;
@@ -123,7 +123,7 @@ body {
 }
 
 .fonctionnement__bloc {
-  background-color: rgba(230, 229, 229, 0.308);
+  background-color: #F6F6F6;
   width: 85%;
   height: 72px;
   border-radius: 15px;
@@ -169,7 +169,7 @@ body {
 }
 
 .restaurants {
-  background-color: rgba(230, 229, 229, 0.308);
+  background-color: #F6F6F6;
   padding-bottom: 20px;
 }
 
@@ -251,6 +251,32 @@ body {
   margin-right: 30px;
 }
 
+/*
+.toggle-heart {
+    display: none;
+}
+
+.content__heart {    
+    &__uncheck {
+        display: flex;
+    }
+
+    &__check {
+        display: none;
+    }
+}
+
+.toggle-heart:checked + .content__heart .content__heart{
+  &__uncheck{
+    display: none;
+  }
+
+  &__check{
+    display: flex;
+    color: $main-color;
+  }
+}
+*/
 .fa-heart {
   font-size: 30px;
 }

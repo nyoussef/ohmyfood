@@ -2,7 +2,7 @@ $border-bottom-shadow: 0 3px 2px -2px gray;
 $main-color: #9356dc;
 $secondary-color: #FF79DA;
 $icon-fonctionnement-color: #7E7E7E;
-$bg-color: rgba(230, 229, 229, 0.308);
+$bg-color: #F6F6F6;
 $pastille-image-text-color: #008766;
 $pastille-image-bg-color: #99E2D0;
 $footer-bg-color: #353535;
@@ -18,6 +18,21 @@ $footer-icon-color: white;
   margin-right: 20px;
   color: $color;
   width: 15px;
+}
+
+@mixin button-style{
+  text-decoration: none;
+  background-color: $main-color;
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px grey;
+  transition: background-color 1s ease, box-shadow 1s ease;
+
+  &:hover{
+    background-color: mix($main-color, $secondary-color, 0.5);
+    box-shadow: 1px 1px 16px grey;
+  }
 }
 
 * {
@@ -87,18 +102,7 @@ body{
   }
 
   &__button {
-    text-decoration: none;
-    background-color: $main-color;
-    color: white;
-    padding: 20px;
-    border-radius: 50px;
-    box-shadow: 1px 1px 2px grey;
-    transition: background-color 1s ease, box-shadow 1s ease;
-
-    &:hover{
-      background-color: mix($main-color, $secondary-color, 0.5);
-      box-shadow: 1px 1px 16px grey;
-    }
+    @include button-style;    
   }
 }
 
@@ -260,6 +264,33 @@ body{
   margin-left: 10px;
   margin-right: 30px;
 }
+
+/*
+.toggle-heart {
+    display: none;
+}
+
+.content__heart {    
+    &__uncheck {
+        display: flex;
+    }
+    
+    &__check {
+        display: none;
+    }
+}
+
+.toggle-heart:checked + .content__heart .content__heart{
+  &__uncheck{
+    display: none;
+  }
+
+  &__check{
+    display: flex;
+    color: $main-color;
+  }
+}
+*/
 
 .fa-heart{
   font-size: 30px;
