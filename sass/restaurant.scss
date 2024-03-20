@@ -53,6 +53,7 @@ $border-bottom-color: 3px solid $tertiary-color;
 
 body {
   margin: 0 auto;
+  opacity: 1;
 }
 
 .header__arrow {
@@ -62,7 +63,7 @@ body {
 }
 
 .fa-arrow-left {
-  font-size: 30px;
+  font-size: 30px;  
 }
 
 .header__logo {
@@ -81,7 +82,7 @@ body {
   object-fit: cover;
 }
 
-section {
+main {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
@@ -118,12 +119,12 @@ section {
   position: relative;
   color: transparent;
 
-  &:hover {
+  &:active {
     color: $main-color;
   }
 }
 
-.article{
+.section{
   margin-left: 20px;
   margin-right: 20px;
 
@@ -134,18 +135,19 @@ section {
   }
 }
 
-.article__name{
+.section__name{
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
 }
 
-.article__name__highlight{
+.section__name__highlight{
   border-bottom: $border-bottom-color;
+  padding-bottom: 5px;
 }
 
 
-.article__menu{
+.section__menu{
   @include center-flex;
   flex-direction:column;
   margin-bottom: 10px;

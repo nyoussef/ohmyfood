@@ -6,6 +6,7 @@
 
 body {
   margin: 0 auto;
+  opacity: 1;
 }
 
 .header__arrow {
@@ -38,7 +39,7 @@ body {
      object-fit: cover;
 }
 
-section {
+main {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
@@ -74,33 +75,34 @@ section {
   position: relative;
   color: transparent;
 }
-.restaurant__heart__check:hover {
+.restaurant__heart__check:active {
   color: #9356dc;
 }
 
-.article {
+.section {
   margin-left: 20px;
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  .article {
+  .section {
     margin-right: auto;
     margin-left: auto;
     width: 70%;
   }
 }
 
-.article__name {
+.section__name {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
 }
 
-.article__name__highlight {
+.section__name__highlight {
   border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
 }
 
-.article__menu {
+.section__menu {
   display: flex;
   justify-content: center;
   align-items: center;
