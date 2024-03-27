@@ -49,8 +49,8 @@ $loader-color: #007bff;
 
 @keyframes hide-loader {
   0% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; display: none; }
+  50% { opacity: 1; }
+  100% { opacity: 0; display: none; visibility: hidden;  }
 }
 
 .loader {
@@ -64,7 +64,7 @@ $loader-color: #007bff;
   justify-content: center; 
   align-items: center; 
   z-index: 9999; 
-  animation: hide-loader 1s forwards;
+  animation: hide-loader 2s forwards;
 }
 
 .spinner {
