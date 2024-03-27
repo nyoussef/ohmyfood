@@ -45,17 +45,24 @@ main {
   margin-right: auto;
   background-color: #f6f6f6;
   position: relative;
-  top: -50px;
+  margin-top: -50px;
+  padding-bottom: 30px;
   border-radius: 50px 50px 0 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .restaurant {
   padding-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .restaurant {
+    justify-content: center;
+  }
 }
 .restaurant__title {
   font-size: 24px;
@@ -66,22 +73,39 @@ main {
   font-size: 30px;
 }
 
-.restaurant__heart__uncheck {
+.restaurant__heart__empty {
   position: relative;
   left: 34px;
 }
 
-.restaurant__heart__check {
+.restaurant__heart__fill {
   position: relative;
+  opacity: 0;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
-.restaurant__heart__check:active {
-  color: #9356dc;
+.restaurant__heart__fill:hover {
+  opacity: 1;
 }
 
 .section {
   margin-left: 20px;
   margin-right: 20px;
+  animation: fadein 4s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    margin-top: 300px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 @media (min-width: 768px) {
   .section {
@@ -150,7 +174,6 @@ main {
   background-color: #99E2D0;
   color: white;
   font-size: 30px;
-  border-radius: 0 10px 10px 0;
   width: 0px;
   line-height: 69px;
   text-align: center;
@@ -208,7 +231,6 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 .section__button:hover {
   background-color: #fa77da;

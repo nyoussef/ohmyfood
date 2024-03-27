@@ -17,6 +17,12 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>      
+
+    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"/></svg>
+      
     <header class="header">
         <div class="header__logo">
             <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood" />
@@ -26,7 +32,7 @@
             <p>Paris, Belleville</p>
         </div>
     </header>
-    <main>
+    <main>         
         <section class="intro">
             <h1 class="intro__title">Réservez le menu qui vous convient</h1>
             <p class="intro__subtitle">
@@ -40,8 +46,7 @@
                 <div class="fonctionnement__bloc">
                     <div class="fonctionnement__bloc__pastille">1</div>
                     <div class="fonctionnement__bloc__contenu">
-                        <i
-                            class="fonctionnement__bloc__contenu__icon fonctionnement__bloc__contenu__icon--padding fa-solid fa-mobile-screen"></i>
+                        <i class="fonctionnement__bloc__contenu__icon fonctionnement__bloc__contenu__icon--padding fa-solid fa-mobile-screen"></i>
                         <p>Choisissez un restaurant</p>
                     </div>
                 </div>
@@ -55,8 +60,7 @@
                 <div class="fonctionnement__bloc">
                     <div class="fonctionnement__bloc__pastille">3</div>
                     <div class="fonctionnement__bloc__contenu">
-                        <i
-                            class="fonctionnement__bloc__contenu__icon fonctionnement__bloc__contenu__icon--color fa-solid fa-store"></i>
+                        <i class="fonctionnement__bloc__contenu__icon fonctionnement__bloc__contenu__icon--color fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
                     </div>
                 </div>
@@ -78,16 +82,9 @@
                                 <h3 class="content__text__title">La palette du jour</h3>
                                 <p class="content__text__location">Ménilmontant</p>
                             </div>
-                            <!--
-                                <input type="checkbox" id="heart_toggle" class="toggle-heart">
-                                <label for="heart_toggle" class="content__heart">
-                                    <i class="content__heart__uncheck fa-regular fa-heart"></i>
-                                    <i class="content__heart__check fa-solid fa-heart"></i>
-                                </label>
-                            -->
                             <div class="content__heart">
-                                <i class="content__heart__uncheck fa-regular fa-heart"></i>
-                                <i class="content__heart__check fa-solid fa-heart"></i>
+                                <i class="content__heart__empty fa-regular fa-heart"></i>
+                                <i class="content__heart__fill fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -106,8 +103,8 @@
                                 <p class="content__text__location">Charonne</p>
                             </div>
                             <div class="content__heart">
-                                <i class="content__heart__uncheck fa-regular fa-heart"></i>
-                                <i class="content__heart__check fa-solid fa-heart"></i>
+                                <i class="content__heart__empty fa-regular fa-heart"></i>
+                                <i class="content__heart__fill fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -125,8 +122,8 @@
                                 <p class="content__text__location">Cité Rouge</p>
                             </div>
                             <div class="content__heart">
-                                <i class="content__heart__uncheck fa-regular fa-heart"></i>
-                                <i class="content__heart__check fa-solid fa-heart"></i>
+                                <i class="content__heart__empty fa-regular fa-heart"></i>
+                                <i class="content__heart__fill fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -144,8 +141,8 @@
                                 <p class="content__text__location">Folie-Méricourt</p>
                             </div>
                             <div class="content__heart">
-                                <i class="content__heart__uncheck fa-regular fa-heart"></i>
-                                <i class="content__heart__check fa-solid fa-heart"></i>
+                                <i class="content__heart__empty fa-regular fa-heart"></i>
+                                <i class="content__heart__fill fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
